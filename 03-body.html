@@ -16,12 +16,75 @@
     </nav>
     <section>
         <h2>Encabezado de seccion</h2>
-        <img src="img/sol.jfif" alt="el sol">
+        <figure>
+            <img src="img/sol.jfif" alt="el sol">
+        </figure>
+        <figcaption>El sol</figcaption>
         <article>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </br> Culpa libero alias temporibus voluptate dicta a iure ut reiciendis aut, vero nulla, omnis ullam! Officia, numquam quis hic maiores cupiditate aliquam?</p>
         </article>
         <article>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa libero alias temporibus voluptate dicta a iure ut reiciendis aut, vero nulla, omnis ullam! Officia, numquam quis hic maiores cupiditate aliquam?</p>
+        </article>
+        <article>
+            <table border="1">
+                <tr>
+                    <th>Mes</th>
+                    <th>Ahorro</th>
+                </tr>
+                <tr>
+                    <td>Enero</td>
+                    <td><meter value="200" min="0" max="200" high="90"></meter></td>
+                </tr>
+                <tr>
+                    <td>Febrero</td>
+                    <td><meter value="150" min="0" max="200" high="90"></meter></td>
+                </tr>
+            </table>
+        </article>
+        <article>
+            <table border="1">
+                <tr>
+                    <th>Mes</th>
+                    <th>Ventas</th>
+                </tr>
+                <tr>
+                    <td>Enero</td>
+                    <td><progress value="200" min="0" max="200" ></progress></td>
+                </tr>
+                <tr>
+                    <td>Febrero</td>
+                    <td><progress value="150" min="0" max="200" ></progress></td>
+                </tr>
+                <tr>
+                    <td>Marzo</td>
+                    <td><progress value="170" min="0" max="200" ></progress></td>
+                </tr>
+            </table>
+        </article>
+        <article>
+            <audio controls  >
+                <source src="audio/01  Queen - Another One Bites The Dust.mp3" type="audio/mp3">
+                <source src="audio/01  Queen - Another One Bites The Dust.wav" type="audio/wav">
+                        <!--
+                    ogg .ogg
+                    mp3 .mp3
+                    wav .wav
+                    acc .m4a .m4p .mp4 .acc
+                    agregar el mismo archivo de audio en los mas utilizados
+                    el sistema operativo toma el de defecto
+                    www.online-convert.com/es
+                    autoplay- se inicia solo
+                    loop - se repite una y otra vez
+                -->
+            </audio>
+        </article>
+        <article>
+            <video controls width="200" height="200">
+                <source src="video/Video 1.mp4" type="video/mp4">
+                <source src="video/Video 1.ogv" type="video/ogv">
+
+            </video>
         </article>
     </section>
     <aside>
