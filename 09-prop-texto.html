@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+            font-family: KaushanScript-Regular;
+            src: url(fonts/Kaushan_Script/KaushanScript-Regular.ttf);
+        }
+        /* estilos iniciales por default*/
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: sans-serif;
+        }
+
+        #chat{
+            position: fixed;
+            width: 200px;
+            height: 50px;
+            bottom: 0;
+            right: 20px;
+            background-color: slateblue;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-family: KaushanScript-Regular;
+            font-size: 20px;
+            border-radius: 20px 20px 0 0;
+            cursor: pointer;
+        }
+
+        /* Estilo por elemento */
+        header{
+            /* con position y margin se centra la caja; */
+            position: relative;
+            margin: 20px auto;
+
+            width: 1000px;
+            height: 120px;
+            /* Se background elimina para mostrar logo */
+            /* background: #444; */
+        }
+
+        /* Estilo por identificador */
+        #logo{
+            position: absolute;
+            left:30px;
+            top:30px;
+            font-family: 'KaushanScript-Regular';
+            font-size: 50px;
+            /* Alineacion horizontal */
+            text-align: center;
+            /* Alineacion vertical */
+            line-height: 60px;
+
+            height: 60px;
+            width: 200px;
+            /* Se quita background: ; */
+            /* background: darkgray; */
+        }
+
+        /* Estilo por clase */
+        .redes{
+            position: absolute;
+            width: 42px;
+            height: 42px;
+
+            background: darkgray;
+            border-radius: 100%;
+            /* Se agregan propiedades de texto */
+            text-align: center;
+            line-height: 42px;
+            color: white;
+        }
+
+        /* Estilo por identificador */
+        #icono1{
+            right: 120px ;
+            top: 40px;
+            background-color: blue;
+        }
+
+        /* Estilo por identificador */
+        #icono2{
+            right: 70px ;
+            top: 40px;
+            background-color:thistle;
+        }
+
+        /* Estilo por identificador */
+        #icono3{
+            right: 20px ;
+            top: 40px;
+            background-color: teal;
+        }
+
+        /* Estilo por elemento */
+        nav{
+            /* con position y margin se centra la caja; */
+            position: relative;
+            margin: auto;
+
+            width: 1000px;
+            height: 48px;
+        }
+
+        /* Estilo por clase */
+        .botones{
+            float: left;
+            width: 196px;
+            height: 48px;
+            margin: 0px 2px;
+            background: rgba(50, 50, 200, .5);
+            /* se agregan propiedades de texto */
+            font-family: 'KaushanScript-Regular';
+            text-align: center;
+            line-height: 48px;
+        }
+
+        /* Estilo por identificador */
+        #b-izquierdo{
+            margin: 0px 2px 0px 0px;
+            width: 198px;
+        }
+
+        /* Estilo por identificador */
+        #b-derecho{
+            margin: 0px 0px 0px 2px;
+            width: 198 px;
+        }
+
+        /* Estilo por identificador */
+        #top{
+            /* con position y margin se centra la caja; */
+            position: relative;
+            margin: 20px auto;
+
+            width: 1000px;
+            height: 192px;
+            /* background: #888; */
+        }
+
+        /* Estilo por ruta de ubicacion */
+        #top ul{
+            float: left;
+            width: 1010px;
+            height: 192px;
+            /* background: rgba(100,100,100,.5); */
+        }
+
+        /* Estilo por ruta de ubicacion */
+        #top ul li{
+            float: left;
+            width: 326px;
+            height: 192px;
+            /* Se quita border-color:  */
+            /* background: #666; */
+            margin-right: 10px;
+            /* se agregan propiedades de texto */
+            text-align: center;
+
+        }
+        #top ul li img{
+            border-radius: 100%;
+            height: 100px;
+            width: 100px;
+        }
+        #top ul li h1{
+            font-family: 'KaushanScript-Regular';
+        }
+
+        #top ul li p{
+            font-size: 14px;
+            margin: 10px;
+        }
+
+        /* Estilo por elemento */
+        section{
+            /* con position y margin se centra la caja; */
+            position: relative;
+            margin: auto;
+
+            width: 1000px;
+            height: 453px;
+            /* Se quita background: ; */
+            /* background: #666; */
+        }
+
+
+        /* Estilo por ruta de ubicacion */
+        aside#izq{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 453px;
+            /* background: #aaa; */
+            margin-bottom: 10px;
+        }
+        aside#izq ul li{
+            background-color: #aaa;
+            margin: 2px 10px;
+            padding: 10px;
+            list-style: square;
+            list-style-position: inside;
+            list-style-image: url(img/pin.jfif);
+        }
+        a .botones:hover{
+            background-color: rgba(144, 92, 146, 0.5);
+            
+        }
+        a .botones:active{
+            background-color: rgba(146,92,144,1);
+            
+        }
+        aside#izq ul li a {
+            text-decoration: none;
+        }        
+
+        /* Estilo por elemento */
+        article{
+            position: absolute;
+            left: 200px;
+            top: 0;
+            width: 600px;
+            height: 453px;
+            margin-bottom: 10px;
+            /* background: #333; */
+
+        }
+        article h1{
+         font-family: 'KaushanScript-Regular';
+         font-size: 40px;
+         text-align: center;
+         margin: 20px;
+        }
+        article p img{
+            width: 300px;
+            height: 200px;
+            float :left;
+            margin-right: 20px;
+        }
+
+        article p {
+            margin: 20px;
+            font-size: 14px;
+            text-align: justify;
+        }
+        /* Estilo por ruta de ubicacion */
+        aside#der{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 200px;
+            height: 453px;
+            margin-bottom: 10px;
+            /* background: #aaa; */
+        }
+
+        aside#der h1{
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: white;
+            background: rgba(50, 50, 200,.5);
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        aside#der input{
+            padding: 10px;
+            margin: 5px 0;
+            width: 177px;
+        }
+
+        aside#der form input[type ="text"]{
+            background: url(img/usuario.png);
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: contain;
+        }
+        /* Estilo por elemento */
+
+        aside#der form input[type ="password"]{
+            background: url(img/contraseña.png);
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: contain;
+        }
+
+        aside#der form input[type ="submit"]{
+            width: 200px;
+            background: rgba(50, 50, 200,.5);
+            border: 0;
+            font-size: 20px;
+            color: rgb(2, 32, 56);
+            /* border-radius: 10%; */
+        }
+
+        footer{
+            /* con position y margin se centra la caja; */
+            position: relative;
+            margin: 20px auto;
+
+            width: 1000px;
+            height: 70px;
+            background: #888;
+            text-align: center;
+            line-height: 70px;
+            background: rgba(50, 50, 200, .5);
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="chat">Chat</div>
+    <!-- encabezado -->
+    <header>
+        <div id="logo">Logotipo</div>
+
+        <div id="icono1" class="redes">X</div>
+        <div id="icono2" class="redes">X</div>
+        <div id="icono3" class="redes">X</div>
+    </header>
+<!-- fin encabezado -->
+
+<!-- barra navegacion -->
+    <nav>
+        <ul>
+            <a href="#"><li id="b-izquierdo" class="botones">Boton 1</li>
+            <a href="#"><li id="centro1"class="botones">Boton 2</li></a>
+            <a href="#"><li id="centro2"class="botones">Boton 3</li></a>
+            <a href="#"><li id="centro3"class="botones">Boton 4</li></a>
+            <a href="#"><li id="b-derecho"class="botones">Boton 5</li></a>
+        </ul>
+    </nav>
+
+    <!-- fin barra navegacion -->
+
+    <!-- inicia parte superior -->
+    <div id="top">
+        <ul>
+            <li>
+                <img src="img/sol.jfif" alt="Sol" >
+                <h1>Lorem Ipsum</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </li>
+            <li>
+                <img src="img/luna.jpg" alt="Luna" >
+                <h1>Lorem Ipsum</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </li>
+            <li>
+                <img src="img/tierra.jpg" alt="Tierra" >
+                <h1>Lorem Ipsum</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </li>
+        </ul>
+    </div>
+    <!-- fin parte superior -->
+
+    <!-- inicia seccion -->
+    <section>
+        <aside id="izq">
+            <ul>
+                <li><a href="#"class = "link">Link 1</a></li>
+                <li><a href="#"class = "link">Link 2</a></li>
+                <li><a href="#"class = "link">Link 3</a></li>
+                <li><a href="#"class = "link">Link 4</a></li>
+                <li><a href="#"class = "link">Link 5</a></li>
+            </ul>
+        </aside>
+        <article>
+            <h1>Lorem Ipsum</h1>
+            <p><img src="img/paisaje.png" alt="paisaje">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem asperiores nobis laborum quaerat. Consectetur impedit laboriosam eius qui enim dicta ratione libero voluptatem minus eos maiores, quaerat modi ex sunt.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quo facilis, ipsum eaque sed consequatur ab, provident quasi optio adipisci, minima a quas laudantium itaque. Quas beatae totam accusamus rem!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem asperiores nobis laborum quaerat. Consectetur impedit laboriosam eius qui enim dicta ratione libero voluptatem minus eos maiores, quaerat modi ex sunt.
+            </p>
+            </article>
+        <aside id="der">
+            <h1>Ingreso</h1>
+            <form >
+                <input type="text" placeholder="Usuario">
+                <input type="password" placeholder="Contraseña">
+                <input type="submit" value="Enviar" >
+            </form>
+        </aside>
+    </section>
+    <!-- fin seccion -->
+
+    <!-- inicia pie de pagina -->
+    <footer>&copy; Todos los derechos reservados</footer>
+    <!-- fin pie de pagina -->
+</body>
+</html>

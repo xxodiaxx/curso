@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* estilos iniciales */
+        /* estilos iniciales por default*/
         *{
             margin: 0;
             padding: 0;
             list-style: none;
         }
+
+        /* Estilo por elemento */
         header{
             /* con position y margin se centra la caja; */
             position: relative;
@@ -19,6 +21,47 @@
             height: 120px;
             background: #444;
         }
+
+        /* Estilo por identificador */
+        #logo{
+            position: absolute;
+            left:30px;
+            top:30px;
+
+            height: 60px;
+            width: 200px;
+            background: darkgray;
+        }
+
+        /* Estilo por clase */
+        .redes{
+            position: absolute;
+            width: 42px;
+            height: 42px;
+
+            background: darkgray;
+            border-radius: 100%;
+        }
+
+        /* Estilo por identificador */
+        #icono1{
+            right: 120px ;
+            top: 40px;
+        }
+
+        /* Estilo por identificador */
+        #icono2{
+            right: 70px ;
+            top: 40px;
+        }
+
+        /* Estilo por identificador */
+        #icono3{
+            right: 20px ;
+            top: 40px;
+        }
+
+        /* Estilo por elemento */
         nav{
             /* con position y margin se centra la caja; */
             position: relative;
@@ -26,8 +69,30 @@
 
             width: 1000px;
             height: 48px;
-            background: #666;            
         }
+
+        /* Estilo por clase */
+        .botones{
+            float: left;
+            width: 196px;
+            height: 48px;
+            margin: 0px 2px;
+            background: #aaa;
+        }
+
+        /* Estilo por identificador */
+        #b-izquierdo{
+            margin: 0px 2px 0px 0px;
+            width: 198px;
+        }
+
+        /* Estilo por identificador */
+        #b-derecho{
+            margin: 0px 0px 0px 2px;
+            width: 198 px;
+        }
+
+        /* Estilo por identificador */
         #top{
             /* con position y margin se centra la caja; */
             position: relative;
@@ -35,9 +100,27 @@
 
             width: 1000px;
             height: 192px;
-            background: #888;            
-
+            /* background: #888; */
         }
+
+        /* Estilo por ruta de ubicacion */
+        #top ul{
+            float: left;
+            width: 1010px;
+            height: 192px;
+            /* background: rgba(100,100,100,.5); */
+        }
+
+        /* Estilo por ruta de ubicacion */
+        #top ul li{
+            float: left;
+            width: 326px;
+            height: 192px;
+            background: black;
+            margin-right: 10px;
+        }
+
+        /* Estilo por elemento */
         section{
             /* con position y margin se centra la caja; */
             position: relative;
@@ -45,8 +128,43 @@
 
             width: 1000px;
             height: 453px;
-            background: #666;            
-        }        
+            background: #666;
+        }
+
+
+        /* Estilo por ruta de ubicacion */
+        aside#izq{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 453px;
+            background: #aaa;
+        }
+
+
+        /* Estilo por elemento */
+        article{
+            position: absolute;
+            left: 200px;
+            top: 0;
+            width: 600px;
+            height: 453px;
+            background: black;
+
+        }
+
+        /* Estilo por ruta de ubicacion */
+        aside#der{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 200px;
+            height: 453px;
+            background: #aaa;
+        }
+
+        /* Estilo por elemento */
         footer{
             /* con position y margin se centra la caja; */
             position: relative;
@@ -54,31 +172,31 @@
 
             width: 1000px;
             height: 70px;
-            background: #888;            
-        }        
+            background: #888;
+        }
     </style>
     <title>Document</title>
 </head>
+
 <body>
     <!-- encabezado -->
     <header>
         <div id="logo"></div>
 
-        <div id="icono1"></div>
-        <div id="icono2"></div>
-        <div id="icono3"></div>
+        <div id="icono1" class="redes"></div>
+        <div id="icono2" class="redes"></div>
+        <div id="icono3" class="redes"></div>
     </header>
 <!-- fin encabezado -->
 
 <!-- barra navegacion -->
     <nav>
         <ul>
-            <li class="botones"></li>
-            <li class="botones"></li>
-            <li class="botones"></li>
-            <li class="botones"></li>
-            <li class="botones"></li>
-            <li class="botones"></li>
+            <li id="b-izquierdo" class="botones"></li>
+            <li id="centro1"class="botones"></li>
+            <li id="centro2"class="botones"></li>
+            <li id="centro3"class="botones"></li>
+            <li id="b-derecho"class="botones"></li>
         </ul>
     </nav>
 
